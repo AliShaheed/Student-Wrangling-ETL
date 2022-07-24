@@ -1,5 +1,5 @@
 import pandas as pd
-from datetime import datetime
+
 
 def drop_columns(data_frame):
     data_frame = data_frame.drop(columns=['Zscore',
@@ -48,9 +48,10 @@ def transform(data_frame):
     trans_df = merge_birthdate(not_absent_df)
     return trans_df
 
+def load(data_frame):
+    return data_frame.to_csv('cleaned_results.csv')
+
 csv_file = "al_results_2020.csv"
 df = extract(csv_file)
 trans_df = transform(df)
-
-
-print(trans_df)
+load(trans_df)

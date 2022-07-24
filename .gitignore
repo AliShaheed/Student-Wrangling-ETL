@@ -350,3 +350,5 @@ MigrationBackup/
 .ionide/
 Untitled.ipynb
 .ipynb_checkpoints/Untitled-checkpoint.ipynb
+test.csv
+test2.csv
